@@ -1,0 +1,12 @@
+.searchBox {
+  display: flex;
+
+  input {
+    width: 100%;
+    flex: 1;
+  }
+
+  button {
+    background-color: transparent;
+  }
+}

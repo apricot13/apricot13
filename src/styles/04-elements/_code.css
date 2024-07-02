@@ -1,0 +1,10 @@
+code {
+  font-size: 0.85em;
+}
+
+code {
+  padding: 0.125em 0.4em;
+  font-family: var(--font-monospace);
+  background: var(--color-bg-accent);
+  border-radius: var(--radius-xs);
+}

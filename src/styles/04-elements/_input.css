@@ -1,0 +1,17 @@
+:is(input:focus-visible) {
+  outline: var(--outline);
+  outline-offset: var(--outline-offset);
+}
+
+form {
+  > * {
+    margin: 0.2rem 0.3rem 0.2rem 0;
+  }
+}
+
+input {
+  background-color: var(--color-bg-accent);
+  border: 0;
+  padding: var(--space-xs);
+  color: var(--color-2);
+}

@@ -1,0 +1,45 @@
+.tree {
+  padding: 0;
+}
+
+.tree a {
+  text-decoration: none;
+}
+
+.tree__item-title {
+  padding: 0.2rem;
+  margin: 0 0 0.2rem;
+}
+
+.tree__item-title:hover {
+  background-color: var(--color-bg-accent);
+}
+
+.tree__item-title.heading .tree__collapser {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  /* border-bottom: 1px solid var(--color-bg-accent); */
+  /* background-color: var(--color-1); */
+}
+
+.tree__collapser {
+  border: 0;
+  background: transparent;
+}
+
+.tree__item > .tree__item-title + .tree__node {
+  padding-left: 1rem;
+}
+
+.tree__item > .tree__item-title + .tree__node .tree__item-title:not(.heading) {
+  font-size: 0.9em;
+}
+
+/* .tree__item > .tree__node {
+  border-left: 1px solid var(--color-bg-accent);
+} */

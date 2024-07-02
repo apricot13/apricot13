@@ -1,0 +1,17 @@
+footer {
+  border-top: 2px solid var(--color-bg-accent);
+  justify-items: center;
+  margin-top: auto;
+  text-align: center;
+  padding-block: var(--space-sm)
+    calc(var(--space-sm) + env(safe-area-inset-bottom));
+
+  p {
+    font-size: var(--font--1);
+    line-height: 1.3;
+  }
+
+  > * {
+    grid-column: content;
+  }
+}

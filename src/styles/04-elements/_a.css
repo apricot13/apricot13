@@ -1,0 +1,13 @@
+a {
+  color: var(--color-secondary);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-text-accent);
+}
+
+:is(a:focus-visible) {
+  outline: var(--outline);
+  outline-offset: var(--outline-offset);
+}

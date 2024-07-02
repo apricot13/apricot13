@@ -1,0 +1,29 @@
+.skip-to-content {
+  position: fixed;
+  top: var(--space-sm);
+  left: calc(var(--page-padding) - var(--space-2xs));
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: var(--space-3xs);
+  place-self: start;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  background-color: var(--color-bg-accent);
+  z-index: 2;
+}
+
+.skip-to-content:focus {
+  opacity: 1;
+  pointer-events: initial;
+  user-select: initial;
+  outline-offset: 3px;
+}
+
+.skip-to-content .icon {
+  width: 1.125em;
+  height: 1.125em;
+  fill: currentColor;
+}

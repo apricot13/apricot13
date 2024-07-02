@@ -1,0 +1,15 @@
+ul,
+ol {
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+
+li::marker {
+  color: var(--color-primary);
+}
+
+dl {
+  dt {
+    margin-block-start: var(--space, var(--space-md));
+  }
+}

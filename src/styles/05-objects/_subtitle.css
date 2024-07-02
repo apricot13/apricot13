@@ -1,0 +1,9 @@
+.subtitle {
+  --space: 1rem;
+  font-family: var(--font-secondary);
+  font-size: var(--font-2);
+  font-weight: var(--font-weight-lite);
+  line-height: 1.2;
+  max-width: 35ch;
+  color: var(--color-text-accent);
+}

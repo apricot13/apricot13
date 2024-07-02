@@ -1,0 +1,17 @@
+.wrapper {
+  --full: minmax(var(--page-padding), 1fr);
+  --content: min(var(--page-max-width), 100% - var(--page-padding) * 2);
+  --popout: minmax(0, 2rem);
+  --feature: minmax(0, 5rem);
+
+  display: grid;
+  grid-template-columns:
+    [full-start] var(--full)
+    [feature-start] var(--feature)
+    [popout-start] var(--popout)
+    [content-start] var(--content) [content-end]
+    var(--popout) [popout-end]
+    var(--feature) [feature-end]
+    var(--full) [full-end];
+  scroll-margin-top: var(--space-2xl);
+}

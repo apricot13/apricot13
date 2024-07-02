@@ -1,0 +1,28 @@
+.meta {
+  --space: 1rem;
+  margin-block-end: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+  font-size: 0.8em;
+
+  svg {
+    --size: 1.5em;
+    flex-shrink: 0;
+    width: var(--size);
+    height: var(--size);
+    transform: rotate(-10deg);
+  }
+
+  > * {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    line-height: 1.2;
+  }
+
+  .created,
+  .updated {
+    font-size: 0.9rem;
+  }
+}

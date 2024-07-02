@@ -1,0 +1,100 @@
+.twoCol {
+  --main-col: minmax(var(--page-max-width), 1fw);
+  --side-col: 0px;
+  --layout-full: 0.5rem;
+  --layout-gap: 0px;
+
+  display: grid;
+  grid-template-columns:
+    [full-start] var(--layout-full)
+    [layout-main] var(--main-col)
+    [layout-gap] var(--layout-gap)
+    [layout-side] var(--side-col)
+    [full-end] var(--layout-full);
+
+  &__main,
+  &__sidebar {
+    grid-column: layout-main;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --main-col: minmax(
+      var(--page-max-width),
+      calc(var(--page-max-width) + 7rem)
+    );
+    --side-col: var(--sidebar-max-width);
+    --layout-full: auto;
+    --layout-gap: auto;
+
+    &__main {
+      grid-column: layout-main;
+    }
+
+    &__sidebar {
+      grid-column: layout-side;
+    }
+  }
+
+  &__main {
+    .main {
+      --full: 0;
+      --content: minmax(1vw, var(--page-max-width));
+      --popout: minmax(0.1rem, 0.3rem);
+      --feature: minmax(0.1rem, 0.3rem);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns:
+        [full-start] var(--full)
+        [feature-start] var(--feature)
+        [popout-start] var(--popout)
+        [content-start] var(--content) [content-end]
+        var(--popout) [popout-end]
+        var(--feature) [feature-end]
+        var(--full) [full-end];
+      scroll-margin-top: var(--space-2xl);
+      display: grid;
+
+      @media screen and (min-width: 1200px) {
+        --full: minmax(var(--page-padding), 1fr);
+        --content: min(var(--page-max-width), 100% - var(--page-padding) * 2);
+        --popout: minmax(0, 2rem);
+        --feature: minmax(0, 5rem);
+      }
+    }
+  }
+
+  &__sidebar {
+    .sidebar > * + * {
+      margin-block-start: var(--space, var(--space-md));
+    }
+
+    .sidebar {
+      --sidebar-full: minmax(0.1rem, 0.3rem);
+      --sidebar-content: minmax(1vw, var(--page-max-width));
+
+      display: grid;
+      grid-template-columns:
+        [sidebar-full-start] var(--sidebar-full)
+        [sidebar-content-start] var(--sidebar-content) [sidebar-content-end]
+        var(--sidebar-full) [sidebar-full-end];
+      scroll-margin-top: var(--space-2xl);
+      display: inline-grid;
+
+      > * {
+        grid-column: sidebar-content;
+      }
+
+      p {
+        margin: 1rem 0;
+      }
+
+      @media screen and (min-width: 1200px) {
+        --sidebar-full: minmax(var(--page-padding), 1fr);
+        --sidebar-content: min(
+          var(--sidebar-max-width),
+          100% - var(--page-padding) * 2
+        );
+      }
+    }
+  }
+}

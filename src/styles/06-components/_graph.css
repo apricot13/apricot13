@@ -1,0 +1,28 @@
+#graph-container {
+  border: 1px solid var(--color-bg-accent);
+  background-color: var(--color-bg);
+}
+text {
+  fill: var(--color-text);
+  opacity: 0.6;
+}
+
+text:hover {
+  opacity: 1;
+}
+
+#graph-container svg {
+  width: 100% !important;
+}
+
+.note-graph {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-bg-accent);
+  height: 400px;
+  overflow: hidden !important;
+  margin-bottom: 1rem;
+}
+
+.note-graph svg {
+  width: 100% !important;
+}

@@ -1,0 +1,11 @@
+button {
+  color: var(--color-2);
+  background-color: var(--color-bg-accent);
+  border: 0;
+  padding: var(--space-xs);
+}
+
+:is(button:focus-visible) {
+  outline: var(--outline);
+  outline-offset: var(--outline-offset);
+}

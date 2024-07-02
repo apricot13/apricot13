@@ -1,0 +1,37 @@
+.tag {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  &--border {
+    .tag__text {
+      border: var(--color-text-accent) 1px solid;
+    }
+  }
+
+  &__badge {
+    margin-left: 0.5rem;
+    background-color: var(--color-4);
+    color: var(--color-4-text);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  &__text {
+    white-space: nowrap;
+    border-radius: 8px;
+    padding: 0.2rem 0.5rem;
+
+    color: var(--color-text-accent);
+
+    &:before {
+      content: '#';
+      margin-right: 0.1rem;
+      color: var(--color-text-accent);
+    }
+  }
+}

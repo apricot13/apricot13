@@ -1,0 +1,35 @@
+/* <p className="callout">text</p> */
+
+.callout {
+  --border-width: 0.125rem;
+  --border: var(--border-width) solid var(--color-primary);
+  position: relative;
+  padding: 1.5em;
+  padding-inline-start: 2em;
+  border: var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-accent);
+  box-shadow: var(--space-2xs) var(--space-2xs) 0 var(--color-bg-shadow);
+}
+
+.callout::before {
+  --size: 2.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: '🙌';
+  font-size: 1.25em;
+  line-height: 1;
+  position: absolute;
+  top: 0.6em;
+  left: calc((var(--size) / -2) - (var(--border-width) / 2));
+  width: var(--size);
+  height: var(--size);
+  border: var(--border);
+  background-color: var(--color-bg);
+  border-radius: 100%;
+}
+
+.callout code {
+  background-color: var(--color-bg);
+}

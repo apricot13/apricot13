@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-family: var(--font-primary);
+  font-size: var(--font-0);
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  transition: var(--duration) var(--ease);
+  transition-property: background-color, color;
+}

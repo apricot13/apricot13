@@ -1,0 +1,11 @@
+.sidebar {
+  grid-column: feature;
+  margin: 4rem 0;
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__wrapper {
+    background-color: var(--color-bg-accent);
+  }
+}
