@@ -5,13 +5,10 @@
   "main": "index.html",
   "private": true,
   "scripts": {
-    "start": "npx http-server ./public -i",
+    "start": "npx http-server ./ -i",
     "dev": "npx postcss --env=DEVELOPMENT src/styles/style.css -o public/style.css --watch",
     "build": "npx postcss --env=PRODUCTION src/styles/style.css -o public/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "postcss-cli": "^11.0.0"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +19,7 @@
     "postcss": "^8.4.39",
     "postcss-import": "^15.0.0",
     "postcss-nested": "^6.0.0",
-    "postcss-reporter": "^7.0.5"
+    "postcss-reporter": "^7.0.5",
+    "postcss-cli": "^11.0.0"
   }
 }
